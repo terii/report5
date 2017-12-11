@@ -33,11 +33,13 @@ public class Enemy extends LivingThing {
             }else {
                 if((int)(Math.random()*10)<3){
                     System.out.printf("%sの攻撃！痛恨の一撃！！%sに%dのダメージを与えた！！\n", this.getName(), opponent.getName(), damage*2);
+                    opponent.wounded(damage*2);
                 }else {
                     System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", this.getName(), opponent.getName(), damage);
+                    opponent.wounded(damage);
                 }
             }
-            opponent.wounded(damage);
+
         }
     }
 

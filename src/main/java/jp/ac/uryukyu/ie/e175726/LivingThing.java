@@ -28,6 +28,10 @@ public class LivingThing {
         return  dead;
     }
 
+    public int getAttack() {
+        return attack;
+    }
+
     public void setDead(boolean dead){this.dead=dead;}
 
     public String getName(){
